@@ -1,0 +1,17 @@
+h1, h2 {
+    font-family: Arial;
+    color: steelblue;
+}
+
+p {
+	font-family: Roboto;
+}
+
+#name {
+	font-size: 3em;
+}
+
+#job {
+	font-size: 2em;
+	font-style:  italic;
+}
