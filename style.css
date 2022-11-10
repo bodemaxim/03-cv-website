@@ -1,17 +1,62 @@
-h1, h2 {
-    font-family: Arial;
-    color: steelblue;
-}
+/*layout styling*/
 
-p {
-	font-family: Roboto;
-}
+		* {
+			box-sizing: border-box;
+		}
 
-#name {
-	font-size: 3em;
-}
 
-#job {
-	font-size: 2em;
-	font-style:  italic;
-}
+		div.content{         /*добавление этого дива убивает автопереносы слов при сжатии окна*/
+			width:80%;
+		  margin-right: auto;
+		  margin-left:  auto;
+		}
+
+
+		.columns {
+			float: left;
+			width: 50%;     /*почему бордербокс не контроллит пэддинг*/
+			padding: 10px;
+
+		}
+
+		/* :after - псевдо элемент и селектор. Задает свойства, которые появятся после выбранного элемента*/
+
+		.table:after {
+			content: "";
+			display: flex;                           /*нет разницы с flex и grid, ?*/
+			clear: both;
+		}
+
+
+		@media screen and (max-width: 1080px) {
+			.columns {
+				width:100%;
+			}
+			.content {
+				width:100%;
+			}
+		}
+
+/*font styling*/
+
+		* {
+			text-align: justify;
+		  text-justify: inter-word;
+		}
+
+		h1, h2 {
+		    font-family: Arial;
+		    color: steelblue;
+		}
+
+		#name {
+			font-size: 3em;
+		}
+
+		#job {
+			font-size: 2em;
+			font-style:  italic;
+		}
+
+/*background styling*/
+		
